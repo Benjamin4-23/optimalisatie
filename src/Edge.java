@@ -8,7 +8,7 @@ public class Edge {
     int endpoint2;
 
     public enum EdgeType {
-        REGULAR, OFFSTREET // Add other types if needed
+        REGULAR, OFFSTREET, EXISTING
     }
 
     // Getters and setters can be added here if needed

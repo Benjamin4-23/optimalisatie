@@ -7,7 +7,7 @@ public class Node {
     NodeType nodeType;
 
     public enum NodeType {
-        REGULAR, // Add other types if needed
+        REGULAR, PROSPECT
     }
 
     // Getters and setters can be added here if needed
