@@ -6,6 +6,9 @@ public class Node {
     public double y;
     public NodeType nodeType;
 
+    public Node() {
+
+    }
     public enum NodeType {
         REGULAR, PROSPECT
     }

@@ -7,6 +7,10 @@ public class Edge {
     public int endpoint1;
     public int endpoint2;
 
+    public Edge() {
+
+    }
+
     public enum EdgeType {
         REGULAR, OFFSTREET, EXISTING
     }
