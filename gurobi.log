@@ -1,0 +1,68 @@
+
+Gurobi 11.0.3 (win64, Java) logging started Thu Oct 31 10:25:04 2024
+
+Set parameter Username
+Set parameter LogFile to value "gurobi.log"
+Academic license - for non-commercial use only - expires 2025-10-31
+
+Gurobi 11.0.3 (win64, Java) logging started Thu Oct 31 10:26:53 2024
+
+Set parameter Username
+Set parameter LogFile to value "gurobi.log"
+Academic license - for non-commercial use only - expires 2025-10-31
+Gurobi Optimizer version 11.0.3 build v11.0.3rc0 (win64 - Windows 11.0 (22000.2))
+
+CPU model: Intel(R) Core(TM) i9-10885H CPU @ 2.40GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 8 physical cores, 16 logical processors, using up to 16 threads
+
+Optimize a model with 1233029 rows, 11934 columns and 2465122 nonzeros
+Model fingerprint: 0xe026054f
+Variable types: 0 continuous, 11934 integer (11934 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [2e+00, 4e+03]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Presolve removed 90 rows and 8165 columns
+Presolve time: 0.26s
+
+Explored 0 nodes (0 simplex iterations) in 0.73 seconds (0.48 work units)
+Thread count was 1 (of 16 available processors)
+
+Solution count 0
+
+Model is infeasible
+Best objective -, best bound -, gap -
+
+Gurobi 11.0.3 (win64, Java) logging started Thu Oct 31 10:31:00 2024
+
+Set parameter Username
+Set parameter LogFile to value "gurobi.log"
+Academic license - for non-commercial use only - expires 2025-10-31
+Gurobi Optimizer version 11.0.3 build v11.0.3rc0 (win64 - Windows 11.0 (22000.2))
+
+CPU model: Intel(R) Core(TM) i9-10885H CPU @ 2.40GHz, instruction set [SSE2|AVX|AVX2]
+Thread count: 8 physical cores, 16 logical processors, using up to 16 threads
+
+Optimize a model with 67394 rows, 3556 columns and 134636 nonzeros
+Model fingerprint: 0x07f92d21
+Variable types: 0 continuous, 3556 integer (3556 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [2e+00, 3e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective 1952.0000000
+Presolve removed 67392 rows and 3552 columns
+Presolve time: 0.03s
+Presolved: 2 rows, 4 columns, 4 nonzeros
+Found heuristic solution: objective 1618.0000000
+Variable types: 0 continuous, 4 integer (4 binary)
+
+Explored 1 nodes (0 simplex iterations) in 0.07 seconds (0.02 work units)
+Thread count was 16 (of 16 available processors)
+
+Solution count 2: 1618 1952 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 1.618000000000e+03, best bound 1.618000000000e+03, gap 0.0000%

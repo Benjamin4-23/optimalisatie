@@ -4,8 +4,9 @@ public class Edge {
     public int id;
     public EdgeType edgeType;
     public int cost;
-    public int endpoint1;
-    public int endpoint2;
+
+    public Node endNode1;
+    public Node endNode2;
 
     public Edge() {
 
@@ -15,12 +16,12 @@ public class Edge {
         REGULAR, OFFSTREET, EXISTING
     }
 
-    public Edge(int id, EdgeType edgeType, int cost, int endpoint1, int endpoint2) {
+    public Edge(int id, EdgeType edgeType, int cost, Node endpoint1, Node endpoint2) {
         this.id = id;
         this.edgeType = edgeType;
         this.cost = cost;
-        this.endpoint1 = endpoint1;
-        this.endpoint2 = endpoint2;
+        this.endNode1 = endpoint1;
+        this.endNode2 = endpoint2;
     }
     // Getters and setters can be added here if needed
 } 

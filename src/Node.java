@@ -1,10 +1,17 @@
 package src;
 
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
 public class Node {
     public int id;
     public double x;
     public double y;
     public NodeType nodeType;
+
+    public HashMap<Integer, Edge> outgoingEdges = new HashMap<>();
+    public HashMap<Integer, Edge> incomingEdges = new HashMap<>();
 
     public Node() {
 

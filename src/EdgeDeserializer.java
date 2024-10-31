@@ -13,8 +13,8 @@ public class EdgeDeserializer implements JsonDeserializer<Edge> {
         edge.id = jsonObject.get("id").getAsInt();
         edge.edgeType = Edge.EdgeType.valueOf(jsonObject.get("edge_type").getAsString().toUpperCase());
         edge.cost = jsonObject.get("cost").getAsInt();
-        edge.endpoint1 = jsonObject.get("endpoint1").getAsInt();
-        edge.endpoint2 = jsonObject.get("endpoint2").getAsInt();
+        //edge.endpoint1 = jsonObject.get("endpoint1").getAsInt();
+        //edge.endpoint2 = jsonObject.get("endpoint2").getAsInt();
         
         return edge;
     }

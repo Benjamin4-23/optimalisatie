@@ -8,31 +8,22 @@ import java.io.FileReader;
 import com.gurobi.gurobi.*;
 import java.io.IOException;
 import java.lang.reflect.Type;
+import java.util.ArrayList;
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
 
 public class Main {
     public static void main(String[] args) {
-        GraphData graphData = loadGraphData("data/bagnolet_353p_3844n_4221e.json");
-        if (graphData == null) {
-            System.out.println("Failed to load graph data");
-            return;
-        }
-    }
+        DataReader reader = new DataReader("data/bretigny_62p_1147n_1235e.json");
 
+        // Load our data
+        reader.loadData();
 
-    
-    private static GraphData loadGraphData(String filename) {
-        Gson gson = new GsonBuilder()
-                .registerTypeAdapter(Node.class, new NodeDeserializer())
-                .registerTypeAdapter(Edge.class, new EdgeDeserializer())
-                .create();
+        // Perform the transformation
+        reader.transform();
 
-        try (FileReader reader = new FileReader(filename)) {
-            Type graphDataType = new TypeToken<GraphData>() {}.getType();
-            return gson.fromJson(reader, graphDataType);
-        } catch (IOException e) {
-            e.printStackTrace();
-            return null;
-        }
+        // Initialize the Gurobi model
+
     }
 }
-

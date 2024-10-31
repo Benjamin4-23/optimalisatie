@@ -9,5 +9,6 @@
     <orderEntry type="sourceFolder" forTests="false" />
     <orderEntry type="library" exported="" name="google.code.gson" level="project" />
     <orderEntry type="library" exported="" name="gurobi" level="project" />
+    <orderEntry type="library" exported="" name="json-simple-1.1.1" level="project" />
   </component>
 </module>
