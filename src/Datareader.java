@@ -13,8 +13,9 @@ import org.json.simple.parser.ParseException;
 
 class DataReader {
     private String filepath;
-    private HashMap<Integer, Node> nodes;
-    private HashMap<Integer, Edge> edges;
+    public HashMap<Integer, Node> nodes;
+    public HashMap<Integer, Edge> edges;
+    public Node rootNode;
 
     // Constructor
     public DataReader(String filepath) {
@@ -87,7 +88,7 @@ class DataReader {
 
         // Step 2: Add a virtual root node
         int rootId = -1;
-        Node rootNode = new Node(rootId, 0.0, 0.0, Node.NodeType.REGULAR); // ID -1 for the virtual root
+        rootNode = new Node(rootId, 0.0, 0.0, Node.NodeType.REGULAR); // ID -1 for the virtual root
         nodes.put(rootId, rootNode);
 
         // Connect the root node to all existing non-prospect nodes in the network with cost 0

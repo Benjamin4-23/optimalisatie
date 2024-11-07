@@ -1,0 +1,153 @@
+
+Gurobi 11.0.3 (win64, Java) logging started Sat Nov  2 23:15:15 2024
+
+Set parameter Username
+Set parameter LogFile to value "IPModelOptimizer.log"
+Academic license - for non-commercial use only - expires 2025-10-31
+
+Gurobi 11.0.3 (win64, Java) logging started Sat Nov  2 23:16:42 2024
+
+Set parameter Username
+Set parameter LogFile to value "IPModelOptimizer.log"
+Academic license - for non-commercial use only - expires 2025-10-31
+
+Gurobi 11.0.3 (win64, Java) logging started Sat Nov  2 23:17:00 2024
+
+Set parameter Username
+Set parameter LogFile to value "IPModelOptimizer.log"
+Academic license - for non-commercial use only - expires 2025-10-31
+
+Gurobi 11.0.3 (win64, Java) logging started Sat Nov  2 23:17:10 2024
+
+Set parameter Username
+Set parameter LogFile to value "IPModelOptimizer.log"
+Academic license - for non-commercial use only - expires 2025-10-31
+
+Gurobi 11.0.3 (win64, Java) logging started Sat Nov  2 23:20:26 2024
+
+Set parameter Username
+Set parameter LogFile to value "IPModelOptimizer.log"
+Academic license - for non-commercial use only - expires 2025-10-31
+
+Gurobi 11.0.3 (win64, Java) logging started Sat Nov  2 23:21:24 2024
+
+Set parameter Username
+Set parameter LogFile to value "IPModelOptimizer.log"
+Academic license - for non-commercial use only - expires 2025-10-31
+
+Gurobi 11.0.3 (win64, Java) logging started Sat Nov  2 23:23:52 2024
+
+Set parameter Username
+Set parameter LogFile to value "IPModelOptimizer.log"
+Academic license - for non-commercial use only - expires 2025-10-31
+
+Gurobi 11.0.3 (win64, Java) logging started Sat Nov  2 23:24:49 2024
+
+Set parameter Username
+Set parameter LogFile to value "IPModelOptimizer.log"
+Academic license - for non-commercial use only - expires 2025-10-31
+
+Gurobi 11.0.3 (win64, Java) logging started Sat Nov  2 23:30:57 2024
+
+Set parameter Username
+Set parameter LogFile to value "IPModelOptimizer.log"
+Academic license - for non-commercial use only - expires 2025-10-31
+
+Gurobi 11.0.3 (win64, Java) logging started Sat Nov  2 23:39:05 2024
+
+Set parameter Username
+Set parameter LogFile to value "IPModelOptimizer.log"
+Academic license - for non-commercial use only - expires 2025-10-31
+Gurobi Optimizer version 11.0.3 build v11.0.3rc0 (win64 - Windows 11+.0 (26100.2))
+
+CPU model: 13th Gen Intel(R) Core(TM) i7-13700H, instruction set [SSE2|AVX|AVX2]
+Thread count: 14 physical cores, 20 logical processors, using up to 20 threads
+
+Optimize a model with 197426 rows, 130032 columns and 636108 nonzeros
+Model fingerprint: 0xbb64538b
+Variable types: 0 continuous, 130032 integer (130032 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective 1348.0000000
+Presolve removed 187910 rows and 123845 columns
+Presolve time: 0.19s
+Presolved: 9516 rows, 6187 columns, 31527 nonzeros
+Variable types: 0 continuous, 6187 integer (6187 binary)
+Found heuristic solution: objective 811.0000000
+
+Explored 1 nodes (0 simplex iterations) in 0.52 seconds (0.31 work units)
+Thread count was 20 (of 20 available processors)
+
+Solution count 2: 811 1348 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 8.110000000000e+02, best bound 8.110000000000e+02, gap 0.0000%
+
+Gurobi 11.0.3 (win64, Java) logging started Sat Nov  2 23:43:07 2024
+
+Set parameter Username
+Set parameter LogFile to value "IPModelOptimizer.log"
+Academic license - for non-commercial use only - expires 2025-10-31
+Gurobi Optimizer version 11.0.3 build v11.0.3rc0 (win64 - Windows 11+.0 (26100.2))
+
+CPU model: 13th Gen Intel(R) Core(TM) i7-13700H, instruction set [SSE2|AVX|AVX2]
+Thread count: 14 physical cores, 20 logical processors, using up to 20 threads
+
+Optimize a model with 197426 rows, 130032 columns and 636108 nonzeros
+Model fingerprint: 0xbb64538b
+Variable types: 0 continuous, 130032 integer (130032 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective 1348.0000000
+Presolve removed 187910 rows and 123845 columns
+Presolve time: 0.15s
+Presolved: 9516 rows, 6187 columns, 31527 nonzeros
+Variable types: 0 continuous, 6187 integer (6187 binary)
+Found heuristic solution: objective 811.0000000
+
+Explored 1 nodes (0 simplex iterations) in 0.44 seconds (0.31 work units)
+Thread count was 20 (of 20 available processors)
+
+Solution count 2: 811 1348 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 8.110000000000e+02, best bound 8.110000000000e+02, gap 0.0000%
+
+Gurobi 11.0.3 (win64, Java) logging started Thu Nov  7 12:19:49 2024
+
+Set parameter Username
+Set parameter LogFile to value "IPModelOptimizer.log"
+Academic license - for non-commercial use only - expires 2025-10-31
+Gurobi Optimizer version 11.0.3 build v11.0.3rc0 (win64 - Windows 11+.0 (26100.2))
+
+CPU model: 13th Gen Intel(R) Core(TM) i7-13700H, instruction set [SSE2|AVX|AVX2]
+Thread count: 14 physical cores, 20 logical processors, using up to 20 threads
+
+Optimize a model with 197426 rows, 130032 columns and 636108 nonzeros
+Model fingerprint: 0xbb64538b
+Variable types: 0 continuous, 130032 integer (130032 binary)
+Coefficient statistics:
+  Matrix range     [1e+00, 1e+00]
+  Objective range  [1e+00, 1e+02]
+  Bounds range     [1e+00, 1e+00]
+  RHS range        [1e+00, 1e+00]
+Found heuristic solution: objective 1348.0000000
+Presolve removed 187910 rows and 123845 columns
+Presolve time: 0.20s
+Presolved: 9516 rows, 6187 columns, 31527 nonzeros
+Variable types: 0 continuous, 6187 integer (6187 binary)
+Found heuristic solution: objective 811.0000000
+
+Explored 1 nodes (0 simplex iterations) in 0.65 seconds (0.31 work units)
+Thread count was 20 (of 20 available processors)
+
+Solution count 2: 811 1348 
+
+Optimal solution found (tolerance 1.00e-04)
+Best objective 8.110000000000e+02, best bound 8.110000000000e+02, gap 0.0000%
