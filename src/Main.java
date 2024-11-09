@@ -102,6 +102,12 @@ public class Main {
                 model.addConstr(xij.get(edgeKey), GRB.LESS_EQUAL, expr, "link2_" + edgeKey);
             }
 
+            model.set(GRB.IntParam.Aggregate, 1);  // Enable aggregation
+
+            model.set(GRB.IntParam.Method, 1);  // Use primal simplex (Method = 0 for dual simplex)
+
+            model.set(GRB.DoubleParam.NodefileStart, 0.7);  // Use node files when memory usage exceeds 70% of RAM
+
             // Optimize the model
             model.optimize();
 
