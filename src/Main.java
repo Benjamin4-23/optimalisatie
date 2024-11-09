@@ -4,14 +4,11 @@ import java.io.FileReader;
 import com.gurobi.gurobi.*;
 import java.io.IOException;
 import java.lang.reflect.Type;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Main {
     public static void main(String[] args) {
-        DataReader reader = new DataReader("data/bretigny_62p_1147n_1235e.json");
+        DataReader reader = new DataReader("data/bagnolet_353p_3844n_4221e.json");
 
         // Load our data
         reader.loadData();
@@ -62,7 +59,9 @@ public class Main {
             for (int k : prospects) {
                 // Constraint (2): Each prospect has exactly one off-street edge
                 GRBLinExpr expr = new GRBLinExpr();
+
                 for (Edge edge : reader.nodes.get(k).incomingEdges.values()) {
+                    assert edge.edgeType == Edge.EdgeType.OFFSTREET;
                     String edgeKey = edge.toString();
                     expr.addTerm(1, ykij.get(edgeKey).get(k));
                 }

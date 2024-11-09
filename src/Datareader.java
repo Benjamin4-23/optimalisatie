@@ -2,9 +2,7 @@ package src;
 
 import java.io.FileReader;
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
+import java.util.*;
 
 import org.json.simple.JSONArray;
 import org.json.simple.JSONObject;
@@ -15,6 +13,7 @@ class DataReader {
     private String filepath;
     public HashMap<Integer, Node> nodes;
     public HashMap<Integer, Edge> edges;
+    public Set<Node> existingNodes = new HashSet<>();
     public Node rootNode;
 
     // Constructor
@@ -58,7 +57,6 @@ class DataReader {
 
                 edges.put(id, new Edge(id, Edge.EdgeType.valueOf(type.toUpperCase()), cost, endNode1, endNode2));
             }
-
         } catch (IOException | ParseException e) {
             e.printStackTrace();
         }
@@ -68,6 +66,10 @@ class DataReader {
         List<Edge> directedEdges = new ArrayList<>();
         int i = 0;
         for (Edge edge : edges.values()) {
+            if(edge.edgeType == Edge.EdgeType.EXISTING){
+                existingNodes.add(edge.endNode1);
+                existingNodes.add(edge.endNode2);
+            }
             if (nodes.get(edge.endNode1.id).nodeType == Node.NodeType.PROSPECT ||
                     nodes.get(edge.endNode2.id).nodeType == Node.NodeType.PROSPECT) {
                 // For edges involving a prospect, add a single directed edge towards the prospect
@@ -93,7 +95,7 @@ class DataReader {
         nodes.put(rootId, rootNode);
 
         // Connect the root node to all existing non-prospect nodes in the network with cost 0
-        for (Node node : nodes.values()) {
+        for (Node node : existingNodes) {
             if (node.nodeType != Node.NodeType.PROSPECT) {
                 Edge edgeFromRoot = new Edge(i++, Edge.EdgeType.EXISTING, 0, rootNode, node);
                 edges.put(edgeFromRoot.id, edgeFromRoot);
