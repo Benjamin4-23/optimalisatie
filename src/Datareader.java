@@ -66,19 +66,20 @@ class DataReader {
     public void transform(){
         // Step 1: Convert undirected edges to directed edges
         List<Edge> directedEdges = new ArrayList<>();
+        int i = 0;
         for (Edge edge : edges.values()) {
             if (nodes.get(edge.endNode1.id).nodeType == Node.NodeType.PROSPECT ||
                     nodes.get(edge.endNode2.id).nodeType == Node.NodeType.PROSPECT) {
                 // For edges involving a prospect, add a single directed edge towards the prospect
                 if (nodes.get(edge.endNode1.id).nodeType == Node.NodeType.PROSPECT) {
-                    directedEdges.add(new Edge(edge.id, edge.edgeType, edge.cost, edge.endNode2, edge.endNode1));
+                    directedEdges.add(new Edge(i++, edge.edgeType, edge.cost, edge.endNode2, edge.endNode1));
                 } else {
-                    directedEdges.add(new Edge(edge.id, edge.edgeType, edge.cost, edge.endNode1, edge.endNode2));
+                    directedEdges.add(new Edge(i++, edge.edgeType, edge.cost, edge.endNode1, edge.endNode2));
                 }
             } else {
                 // For regular nodes, add two directed edges
-                directedEdges.add(new Edge(edge.id, edge.edgeType, edge.cost, edge.endNode1, edge.endNode2));
-                directedEdges.add(new Edge(edge.id, edge.edgeType, edge.cost, edge.endNode2, edge.endNode1));
+                directedEdges.add(new Edge(i++, edge.edgeType, edge.cost, edge.endNode1, edge.endNode2));
+                directedEdges.add(new Edge(i++, edge.edgeType, edge.cost, edge.endNode2, edge.endNode1));
             }
         }
         edges.clear();
@@ -92,10 +93,9 @@ class DataReader {
         nodes.put(rootId, rootNode);
 
         // Connect the root node to all existing non-prospect nodes in the network with cost 0
-        int newEdgeId = edges.size() + 1;
         for (Node node : nodes.values()) {
             if (node.nodeType != Node.NodeType.PROSPECT) {
-                Edge edgeFromRoot = new Edge(newEdgeId++, Edge.EdgeType.EXISTING, 0, rootNode, node);
+                Edge edgeFromRoot = new Edge(i++, Edge.EdgeType.EXISTING, 0, rootNode, node);
                 edges.put(edgeFromRoot.id, edgeFromRoot);
             }
         }
